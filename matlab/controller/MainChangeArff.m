@@ -1,0 +1,9 @@
+Init();
+trainPath='D:\pc_×ÀÃæ\testdata\sonar_traindata.csv';
+testPath='D:\pc_×ÀÃæ\testdata\sonar_testdata.csv';
+A=load(trainPath);
+[M,N]=size(A);
+[tran_newmat,tran_arff_path]=SaveArff(trainPath,(1:N-1),0);
+Mat2Arff(tran_newmat,tran_arff_path); 
+[test_newmat,test_arff_path]=SaveArff(testPath,(1:N-1),0);
+Mat2Arff(test_newmat,test_arff_path);
